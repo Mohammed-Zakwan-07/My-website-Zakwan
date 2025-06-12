@@ -1,1 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 @import "tailwindcss";
+
+@theme{
+  --font-PoiretOne: Poiret One, "sans-serif";
+  --font-Monoton: Monoton, "sans-serif"
+}
