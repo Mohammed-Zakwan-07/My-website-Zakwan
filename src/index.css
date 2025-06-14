@@ -4,6 +4,9 @@
 
 @import "tailwindcss";
 
+@import 'devicon/devicon.min.css';
+
+
 @theme{
   --font-PoiretOne: Poiret One, "sans-serif";
   --font-Monoton: Monoton, "sans-serif"

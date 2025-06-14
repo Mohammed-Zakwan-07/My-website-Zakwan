@@ -1,40 +1,119 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function About() {
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (name) => {
+    setOpenSection(openSection === name ? null : name);
+  };
+
+  const sections = {
+    Languages: [
+      { name: "C", icon: "devicon-c-plain" },
+      { name: "C++", icon: "devicon-cplusplus-plain" },
+      { name: "Java", icon: "devicon-java-plain" },
+      { name: "Python", icon: "devicon-python-plain" },
+      { name: "R", icon: "devicon-r-plain" },
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+    ],
+    Frontend: [
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "CSS", icon: "devicon-css3-plain" },
+      { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain" },
+      { name: "React", icon: "devicon-react-original" },
+      { name: "Framer motion", icon: "devicon-framermotion-plain" },
+    ],
+    Concepts: [
+      { name: "🧠 DSA", icon: "" },
+      { name: "💡 Problem Solving", icon: "" },
+      { name: "🐴 OOPs", icon: "" },
+    ],
+    Tools: [
+      { name: "Git", icon: "devicon-git-plain" },
+      { name: "GitHub", icon: "devicon-github-original" },
+      { name: "VS Code", icon: "devicon-vscode-plain" },
+      { name: "Vercel", icon: "devicon-vercel-original" },
+      { name: "Chatgpt", icon: "devicon-chatgpt-plain" },
+    ],
+    Explorinig: [{ name: "Figma", icon: "devicon-figma-plain" }],
+  };
+
   return (
     <>
-      <section id="about" className="h-screen">
-        <div className="text-[#658ebd] text-shadow-zinc-200 px-10 py-10 backdrop-blur-md bg-[#0D1117]/60 border border-[#0b6df8] shadow-2xl rounded-4xl mx-20 grid grid-cols-4 gap-4 tracking-widest">
-          <h2 className="col-span-1 text-4xl font-bold text-[#e9980d]">
-            About me
+      <section
+        id="about"
+        className="grid grid-cols-5 grid-rows-5 gap-6 px-8 py-20"
+      >
+        {/* About Me Text */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="col-span-3 row-span-3 text-[#EDEDED] text-lg leading-relaxed tracking-wide backdrop-blur-md bg-[#0D1117]/60 border border-[#0b6df8] shadow-2xl rounded-3xl p-10 "
+        >
+          <h2 className="text-4xl font-semibold mb-4 text-[#ffffff]">
+            Hi, I’m Mohammed Zakwan
           </h2>
-          <h2 className="text-2xl col-span-3 leading-normal">
-            <span className="text-5xl font-Monoton font-light">Hi</span>I’m
-            Mohammed Zakwan — a Bachelor of Computer Applications (BCA) student
-            with a strong interest in coding, problem-solving, and continuous
-            learning.I’m currently focused on building a solid foundation in
-            software development and exploring new areas of technology to grow
-            both personally and professionally. My goal over the next few years
-            is to sharpen my technical skills, stay curious, and work toward
-            building a meaningful career in tech.I believe learning never stops,
-            and I’m always open to insights, mentorship, and conversations that
-            help me improve. If you have any advice, resources, or just want to
-            connect over a shared passion for tech — I’d love to chat.
-          </h2>
-          <h2 className="col-span-1 text-4xl font-bold text-[#e9980d]">
-            Skills
-          </h2>
-          <ul className="text-2xl col-span-3 leading-normal">
-            <li>C programming</li>
-            <li>Java programming</li>
-            <li>Python</li>
-            <li>DSA</li>
-            <li>JavaScript</li>
-            <li>React.js(learning)</li>
-          </ul>
-        </div>
+          <p className="mb-4">
+            I’m a BCA student based in Bengaluru with a genuine love for tech,
+            problem-solving, and figuring things out one bug at a time.
+          </p>
+          <p className="mb-4">
+            Right now, I’m focused on building a solid foundation in software
+            development — dabbling across code, logic, and a lil’ bit of
+            everything in between.
+          </p>
+          <p className="mb-4">
+            My goal? Keep learning, stay curious, and eventually craft a career
+            I’m proud of. I’m always up for a tech convo or swapping resources,
+            so if you’re down to connect — slide in 👇
+          </p>
+        </motion.div>
+
+        {/* Accordion Skills */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+          className="col-span-2 row-span-3 text-[#EDEDED] backdrop-blur-md bg-[#0D1117]/60 border border-[#0b6df8] shadow-2xl rounded-3xl p-8"
+        >
+          <h3 className="text-3xl font-bold mb-4 text-[#ffffff]">
+            Things I Know
+          </h3>
+          {Object.entries(sections).map(([title, items]) => (
+            <div key={title} className="mb-4">
+              <button
+                onClick={() => toggleSection(title)}
+                className="w-full flex justify-between items-center text-lg font-semibold px-4 py-2 bg-[#161B22] hover:bg-[#1f2937] transition rounded-md"
+              >
+                <span>{title}</span>
+                <span>{openSection === title ? "−" : "+"}</span>
+              </button>
+              <AnimatePresence>
+                {openSection === title && (
+                  <motion.ul
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="pl-5 pt-2 list-outside text-xl space-y-1"
+                  >
+                    {items.map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <i className={`${item.icon} colored text-xl`}></i>
+                        {item.name}
+                      </li>
+                    ))}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </motion.div>
       </section>
     </>
   );
 }
+
 export default About;
