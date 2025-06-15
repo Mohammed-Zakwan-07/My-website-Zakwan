@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
 function Hero() {
@@ -40,12 +41,15 @@ function Hero() {
             transition={{ delay: 0.9, duration: 0.8, ease: "easeOut" }}
             className="mt-8"
           >
-            <a
-              href="#projects"
-              className="bg-[#e9980d] text-white px-6 py-3 rounded-md  hover:bg-[#658ebd] transition-all"
+            <Link
+              to="projects"
+              smooth={true}
+              duration={800}
+              offset={-60} // adjust if your navbar is fixed
+              className="bg-[#e9980d] text-white px-6 py-3 rounded-md hover:bg-[#658ebd] transition-all cursor-pointer"
             >
               Check Out My Work
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>
