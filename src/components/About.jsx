@@ -84,7 +84,7 @@ function About() {
           <div key={title} className="mb-4">
             <button
               onClick={() => toggleSection(title)}
-              className="w-full flex justify-between items-center text-base font-semibold px-4 py-2 bg-[#161B22] hover:bg-[#1f2937] transition rounded-md"
+              className="w-full flex justify-between items-center text-base font-semibold px-4 py-2 bg-[#161B22] hover:bg-[#1f2937] hover:cursor-pointer transition rounded-md"
             >
               <span>{title}</span>
               <span>{openSection === title ? "−" : "+"}</span>
