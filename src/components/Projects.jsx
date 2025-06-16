@@ -41,8 +41,8 @@ export default function Projects() {
           description="Solving DSA problems to level up my logic and grind Leet ⌨️"
           image={LeetcodeImg}
           tech={["DSA", "Problem Solving"]}
-          github="https://github.com/Mohammed-Zakwan-07/My-LeeCode"
-          live="https://github.com/Mohammed-Zakwan-07/My-LeeCode"
+          github="https://github.com/Mohammed-Zakwan-07/My-LeetCode"
+          live="https://github.com/Mohammed-Zakwan-07/My-LeetCode"
         />
         <ProjectCards
           title="C/Java Programs"
