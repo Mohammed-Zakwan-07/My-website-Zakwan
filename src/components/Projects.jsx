@@ -37,7 +37,7 @@ export default function Projects() {
           live="https://weather-gold-two.vercel.app/"
         />
         <ProjectCards
-          title="Leetcode"
+          title="LeetCode"
           description="Solving DSA problems to level up my logic and grind Leet ⌨️"
           image={LeetcodeImg}
           tech={["DSA", "Problem Solving"]}
