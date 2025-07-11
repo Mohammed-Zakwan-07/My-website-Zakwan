@@ -40,7 +40,7 @@ export default function Projects() {
 
         <ProjectCards
           title="Global Styles"
-          description="My first React project handling API calls 🌦️"
+          description="Learn and visualize key CSS properties with live examples"
           image={GlobalStylesimg}
           tech={["Html5", "CSS"]}
           github="https://github.com/Mohammed-Zakwan-07/GlobalStyles"
