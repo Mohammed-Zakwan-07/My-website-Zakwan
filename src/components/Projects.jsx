@@ -5,6 +5,7 @@ import BudgetBuddyImg from "../Assets/BudgetBuddy.png";
 import WeatherImg from "../Assets/Weather.png";
 import LeetcodeImg from "../Assets/Leetcode.png";
 import LearningsImg from "../Assets/Learnings.png";
+import GlobalStylesimg from "../Assets/GlobalStyles.png";
 
 export default function Projects() {
   return (
@@ -30,12 +31,22 @@ export default function Projects() {
         />
         <ProjectCards
           title="Weather App"
-          description="My first React project handling API calls 🌦️"
+          description="Learn and visualize key CSS properties with live examples"
           image={WeatherImg}
           tech={["React", "Tailwind", "API"]}
           github="https://github.com/Mohammed-Zakwan-07/Weather"
           live="https://weather-gold-two.vercel.app/"
         />
+
+        <ProjectCards
+          title="Global Styles"
+          description="My first React project handling API calls 🌦️"
+          image={GlobalStylesimg}
+          tech={["Html5", "CSS"]}
+          github="https://github.com/Mohammed-Zakwan-07/GlobalStyles"
+          live="https://global-styles.vercel.app/"
+        />
+
         <ProjectCards
           title="LeetCode"
           description="Solving DSA problems to level up my logic and grind Leet ⌨️"
