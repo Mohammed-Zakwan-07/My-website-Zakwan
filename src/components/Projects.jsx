@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import BudgetBuddyImg from "../Assets/BudgetBuddy.png";
 import WeatherImg from "../Assets/Weather.png";
 import LeetcodeImg from "../Assets/Leetcode.png";
-import LearningsImg from "../Assets/Learnings.png";
 import GlobalStylesimg from "../Assets/GlobalStyles.png";
 
 export default function Projects() {
@@ -54,14 +53,6 @@ export default function Projects() {
           tech={["DSA", "Problem Solving"]}
           github="https://github.com/Mohammed-Zakwan-07/My-LeetCode"
           live="https://github.com/Mohammed-Zakwan-07/My-LeetCode"
-        />
-        <ProjectCards
-          title="C/Java Programs"
-          description="Some basic C and Java programs I’ve written for learning."
-          image={LearningsImg}
-          tech={["C", "Java"]}
-          github="https://github.com/Mohammed-Zakwan-07/My-learnings"
-          live="https://github.com/Mohammed-Zakwan-07/My-learnings"
         />
       </div>
     </motion.section>
