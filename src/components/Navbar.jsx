@@ -12,9 +12,10 @@ export default function Navbar() {
     >
       <div className="flex justify-between items-center">
         <div className="text-3xl text-[#e9980d] font-Monoton font-extralight flex items-center gap-1 cursor-pointer">
-          <h1 className="transform rotate-[15deg] hover:rotate-0 transition-all duration-200">
+          <h1 className="transform rotate-[15deg] hover:rotate-0 transition-all duration-200 cursor-pointer">
             Z
           </h1>
+
           <h1 className="transform -rotate-[12deg] hover:rotate-0 transition-all duration-200">
             A
           </h1>
@@ -84,6 +85,11 @@ export default function Navbar() {
             <li>
               <Link smooth to="#projects" className="hover:text-[#658ebd]">
                 Projects
+              </Link>
+            </li>
+            <li>
+              <Link to="/doodle" className="hover:text-[#658ebd]">
+                Doodle
               </Link>
             </li>
           </ul>

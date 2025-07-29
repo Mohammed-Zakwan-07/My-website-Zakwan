@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 function Hero() {
   return (
@@ -50,6 +51,12 @@ function Hero() {
             Check Out My Work
           </Link>
         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.8, ease: "easeOut" }}
+          className="mt-8"
+        ></motion.div>
       </div>
     </section>
   );

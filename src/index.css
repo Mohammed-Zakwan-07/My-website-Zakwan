@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
 @import "tailwindcss";
 
-@import 'devicon/devicon.min.css';
+@import "devicon/devicon.min.css";
 
-
-@theme{
+@theme {
   --font-PoiretOne: Poiret One, "sans-serif";
-  --font-Monoton: Monoton, "sans-serif"
+  --font-Monoton: Monoton, "sans-serif";
+}
+/* Tailwind’s @apply magic — drop this in your global.css or wherever you define utilities */
+.icon-btn {
+  @apply p-2 bg-white dark:bg-gray-800 rounded-full shadow hover:scale-110 transition-transform duration-150 border border-gray-200 dark:border-gray-600;
 }
