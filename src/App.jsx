@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import DoodlePage from "./components/doodlepage";
+import DoodlePage from "./components/DoodlePage";
 import Doodle from "./components/Doodle";
 
 export default function App() {
