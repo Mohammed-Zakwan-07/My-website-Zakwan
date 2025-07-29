@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import DoodleCanvas from "./doodlecanvas";
-import DoodleGallery from "./doodlegallery";
+import DoodleCanvas from "./DoodleCanvas";
+import DoodleGallery from "./DoodleGallery";
 
 export default function DoodlePage() {
   const [gallery, setGallery] = useState([]);

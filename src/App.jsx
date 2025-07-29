@@ -5,8 +5,8 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import DoodlePage from "./components/doodlepage";
-import Doodle from "./components/doodle";
+import DoodlePage from "./components/Doodlepage";
+import Doodle from "./components/Doodle";
 
 export default function App() {
   return (

@@ -6,7 +6,7 @@ export default function FollowHero() {
   const navigate = useNavigate();
 
   return (
-    <section className="min-h-[70vh] flex items-center justify-center bg-gradient-to-b from-[#0D1117] to-[#0a0c10] px-6 py-24">
+    <section className="min-h-[70vh] flex items-center justify-center  px-6 py-24">
       <div className="text-center max-w-3xl">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
@@ -14,7 +14,7 @@ export default function FollowHero() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="text-4xl sm:text-5xl font-extralight text-[#F0F6FC] tracking-widest"
         >
-          Something strange is waiting...
+          Something¯\_(ツ)_/¯
         </motion.h2>
 
         <motion.p
