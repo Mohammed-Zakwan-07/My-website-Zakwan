@@ -1,4 +1,4 @@
-import { EDUCATION, CERTIFICATIONS } from "../data/content";
+import { EDUCATION, CERTIFICATIONS } from "../data/Content";
 
 import SectionLabel from "./SectionLabel";
 import EducationHeader from "./EducationHeader";

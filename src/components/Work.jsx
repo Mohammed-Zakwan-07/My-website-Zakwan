@@ -1,4 +1,4 @@
-import { PROJECTS, TIMELINE } from "../data/content";
+import { PROJECTS, TIMELINE } from "../data/Content";
 import ProjectCard from "./ProjectCard";
 import Timeline from "./Timeline";
 

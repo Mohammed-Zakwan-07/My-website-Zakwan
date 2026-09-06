@@ -1,4 +1,4 @@
-import { SKILLS } from "../data/content";
+import { SKILLS } from "../data/Content";
 import SectionLabel from "./SectionLabel";
 import SkillList from "./SkillList";
 

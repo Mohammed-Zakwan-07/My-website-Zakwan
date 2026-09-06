@@ -1,4 +1,4 @@
-import { CONTACT } from "../data/content";
+import { CONTACT } from "../data/Content";
 
 export default function Hero() {
   return (
