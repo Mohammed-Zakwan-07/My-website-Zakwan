@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NAV_ITEMS } from "../data/content";
+import { NAV_ITEMS } from "../Data/Content";
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(() => {
